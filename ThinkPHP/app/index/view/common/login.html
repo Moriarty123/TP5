@@ -1,4 +1,4 @@
-
+<meta charset="utf-8">
 <link rel='stylesheet' href='__CSS__/login.css'>
 
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
@@ -8,42 +8,58 @@
 <!-- <link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" rel="stylesheet"> -->
 <!-- <link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
 
-<div class="container">
-	
-	
-	
 
+<div class="container" style="margin-top: 10px;">
+	
+	<div id="message">
 
-	{include file="common/message" /}
+		{include file="common/message" /}
 
+	</div>
 	
 	
 	<div class="row">
 		<div class="col-md-offset-3 col-md-6 center">
-			<form class="form-horizontal" action="{:url('admin/login/index')}" method="post">
+			<form class="form-horizontal" action="{:url('admin/login/index')}" method="post" id="from">
 
-			
+
 
 				<span class="heading">用户登录</span>
-				<div class="form-group">
-					<input type="text" class="form-control" id="inputName"
-						placeholder="学号或职工号" name="userName"> <i
-						class="fa fa-user"></i>
+				<div class="form-group" style="margin-bottom: 10px;">
+					<input type="text" class="form-control" id="userName"
+					placeholder="学号或职工号" name="userName" /> 
+					<i class="fa fa-user"></i>
 				</div>
-				<div class="form-group help">
-					<input type="password" class="form-control" id="inputPassword"
-						placeholder="密　码" name="password"> <i
-						class="fa fa-lock"></i> <a href="#" class="fa fa-question-circle"></a>
+
+				<div id="tip_userName"><span><font style="font-size: 15px;color: red; float: left; margin-left: 50px; margin-bottom: 10px;visibility: hidden;">请输入正确的用户名</font></span></div>
+				<div style="clear: both;"></div>
+
+				<div class="form-group help" style="margin-bottom: 10px;">
+					<input type="password" class="form-control" id="password"
+					placeholder="密　码" name="password"> 
+					<i class="fa fa-lock"></i> 
+					<a href="#" class="fa fa-question-circle"></a>
+					
 				</div>
+				<div id="tip_password"><span><font style="font-size: 15px;color: red; float: left; margin-left: 50px; margin-bottom: 10px; visibility: hidden;">请输入正确的密码</font></span></div>
+				<div style="clear: both;"></div>
+
 				<div class="form-group">
 					<div class="main-checkbox">
 						<input type="checkbox" value="None" id="checkbox1" name="check" />
 						<label for="checkbox1"></label>
 					</div>
 					<span class="text">记住我</span>
-					<button type="submit" class="btn btn-default">登录</button>
+					<button type="submit" class="btn btn-default" >登录</button>
 				</div>
 			</form>
 		</div>
 	</div>
+
 </div>
+
+
+
+
+
+<script type="text/javascript" src="__JS__/login.js"></script>

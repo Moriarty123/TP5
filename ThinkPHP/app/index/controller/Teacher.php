@@ -12,6 +12,9 @@ class Teacher extends Controller
     }
 
     
-    
+    public function course()
+    {
+    	return $this->fetch('teacher_course');
+    }
 
 }

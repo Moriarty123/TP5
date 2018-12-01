@@ -1,0 +1,36 @@
+{include file="common/teacher_base" /}
+
+<div>
+    <div>
+        <div id="u104" class="ax_default _标题1">
+            <div id="u104_div" class=""></div>
+            <!-- Unnamed () -->
+            <div id="u105" class="text">
+                <p><span>我的实验课程</span></p>
+            </div>
+        </div>
+
+        <!-- Unnamed (下拉列表框) -->
+        <div id="u106" class="ax_default droplist">
+            <select id="u106_input">
+                <option selected value="更多操作">更多操作</option>
+                <option value="添加课程">添加课程</option>
+                <option value="同步课程">同步课程</option>
+                <option value="批量删除">批量删除</option>
+            </select>
+        </div>
+
+        <h3>所有实验课程
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggled btn-sm" data-toggle="dropdown">更多操作<span
+                        class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{url_for('.importAllCourse')}}">同步课程</a></li>
+                    <li><a href="{{url_for('.batchDeleteCourse1')}}">批量删除</a></li>
+                </ul>
+            </div>
+            <!-- {{ search.search(url_for('.course_search'),form) }} -->
+        </h3>
+    </div>
+</div>
