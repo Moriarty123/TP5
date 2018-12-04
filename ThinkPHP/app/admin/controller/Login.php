@@ -4,6 +4,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Db;
 use think\Cookie;
+use app\admin\model\User;
 
 class Login extends Controller
 {
@@ -82,5 +83,16 @@ class Login extends Controller
 		}
     }
 
+    public function login() 
+    {
+    	
+    	$user = new User();
+    	// dump($user);
+    	$res = $user::get(1);
+    	// dump($res);
+    	// $res = $res->toArray();
+    	$res = $res->userName;
+    	dump($res);
+    }
     
 }
